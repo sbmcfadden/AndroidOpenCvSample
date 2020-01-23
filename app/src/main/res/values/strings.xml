@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AndroidOpenCvSample</string>
+    <string name="image_of_books">Image of books</string>
+    <string name="process_image">Process Image</string>
 </resources>

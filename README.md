@@ -23,3 +23,6 @@ Sample application to use OpenCV in Android.
 		System.loadLibrary("opencv_java4");
 	}
 </pre></code>
+
+* Add sample OpenCV operations
+	* e.g., load image and detect edges with Canny operation (as per code)
