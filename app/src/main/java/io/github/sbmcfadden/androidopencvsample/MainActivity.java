@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -15,16 +16,22 @@ import org.opencv.imgproc.Imgproc;
 import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG = "MainActivity";
 
     // load and initialize OpenCV library
     static {
         System.loadLibrary("opencv_java4");
+        System.loadLibrary("native-lib");
     }
+
+    private native String stringFromJNI();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Log.d(TAG, "stringFromJNI() returned " + stringFromJNI());
     }
 
     public void processImage(View v) {
